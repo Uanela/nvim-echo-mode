@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup()
-  vim.api.create_user_auto_command("EchoMode",
+  vim.api.create_user_command("EchoMode",
     function()
       local bufnr = vim.api.nvim_get_current_buf()
       print("Current buffer filetype is: " .. vim.bo[bufnr].filetype .. " in mode " .. vim.fn.mode())
